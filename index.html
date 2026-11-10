@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gravity — Digital Studio</title>
+<title>Stallion Connect — Call centre, BPO and back office</title>
+<meta name="description" content="Call centre, BPO, sales, customer support and back-office outsourcing for banks, financial services firms and growing brands in India and overseas.">
+<link rel="icon" href="assets/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -269,6 +271,136 @@ body.drawer-open #drawer { transform: none; visibility: visible; transition: tra
   .f-cols { grid-column: span 7; }
 }
 @media (prefers-reduced-motion: reduce) { .track, .scroll-cue { animation: none; } }
+
+/* =====================================================================
+   Stallion Connect content layer (on top of the Gravity theme)
+   ===================================================================== */
+#bg .g1 { background: radial-gradient(circle at center, #ffffff 0%, #effbf3 38%, #c2efd2 100%); }
+#bg .g2 { background: radial-gradient(circle at center, #ffffff 0%, #eef9ff 38%, #c3eaff 100%); }
+.hl { color: #0e8a27; }
+
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand img { width: 38px; height: 38px; display: block; }
+.wordmark { font-size: 13px; letter-spacing: 0.18em; white-space: nowrap; }
+.nav { display: none; gap: 30px; }
+.nav a { white-space: nowrap; }
+
+section { padding-top: 120px; padding-bottom: 120px; }
+section.center { align-items: center; }
+section.between { flex-direction: column; justify-content: space-between; gap: 56px; }
+section > * { width: 100%; }
+.h-sec { font-size: clamp(2.3rem, 5vw, 68px); line-height: 0.98; }
+.lead { margin-top: 28px; max-width: 34rem; }
+.col4, .col5, .col6, .col7, .col8 { min-width: 0; }
+
+/* hero */
+#hero { padding-top: 0; }
+.hero-h { font-size: clamp(2.4rem, 6vw, 84px); line-height: 0.98; white-space: normal; }
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 22px; }
+.cta-row .pill { margin-top: 0; padding: 13px 18px; transition: background 0.2s; }
+.cta-row .pill:hover { background: rgba(255,255,255,0.55); }
+.hero-stats { display: flex; gap: 22px; margin-top: 20px; }
+.hero-stats b { display: block; font-family: var(--font-raleway); font-weight: 600; font-size: 22px; letter-spacing: -0.02em; color: var(--n950); }
+.hero-stats span { display: block; margin-top: 2px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--n500); }
+
+/* card grids */
+.grid2, .grid3, .steps, .stats { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.stats { grid-template-columns: repeat(2, 1fr); }
+.card-in { height: 100%; }
+.card { height: 100%; }
+.step .card-idx { font-size: 26px; letter-spacing: 0; font-weight: 500; }
+.stat-n { font-family: var(--font-raleway); font-weight: 500; font-size: clamp(44px, 5vw, 72px); letter-spacing: -0.04em; line-height: 1; color: var(--n950); }
+.stat-n small { font-size: 0.5em; letter-spacing: -0.02em; color: var(--blue); }
+.mv { margin-top: 22px; font-family: var(--font-raleway); font-size: 15px; line-height: 1.5; color: var(--n700); }
+.mv b { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); font-weight: 500; margin-right: 10px; }
+
+/* glass panel */
+.glass-panel { border-radius: 1.4rem; background: rgba(255,255,255,0.5); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); border: 1px solid rgba(255,255,255,0.75); box-shadow: 0 14px 40px -12px rgba(14,42,197,0.18); padding: 26px 24px; }
+
+/* ceo */
+.ceo-photo { max-width: 340px; border-radius: 1.6rem; overflow: hidden; aspect-ratio: 4 / 5; border: 1px solid rgba(255,255,255,0.75); box-shadow: 0 24px 60px -20px rgba(1,43,117,0.4); background: #dfe7f5; }
+.ceo-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ceo-name { margin-top: 18px; font-family: var(--font-raleway); font-weight: 600; font-size: 19px; color: var(--n950); }
+.ceo-role { margin-top: 6px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--n500); line-height: 1.6; }
+.ceo-text { margin-top: 28px; }
+.ceo-text p { font-family: var(--font-raleway); font-size: 15.5px; line-height: 1.65; color: var(--n700); }
+.ceo-text p + p { margin-top: 12px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.tags .pill { margin-top: 0; }
+
+/* industries */
+.ind { align-self: flex-end; max-width: 36rem; }
+.ind .tags { margin-top: 0; }
+
+/* careers */
+.jobs { display: flex; flex-direction: column; gap: 10px; }
+.job-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 22px; }
+.job-in .card-val { margin-top: 0; font-size: 17px; }
+.job-meta { margin-top: 4px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--n500); }
+.apply { display: inline-flex; align-items: center; gap: 6px; flex: none; padding: 9px 14px; border-radius: 999px; background: var(--n950); color: #fff; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; transition: background 0.2s; }
+.apply:hover { background: var(--blue); }
+.apply svg { width: 12px; height: 12px; }
+.mail.dark { margin-top: 28px; border-color: rgba(10,10,10,0.12); background: rgba(255,255,255,0.45); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); color: var(--n950); font-size: 15px; }
+.mail.dark:hover { background: rgba(255,255,255,0.7); }
+
+/* faq */
+.faq-col { max-width: 780px; margin: 0 auto; }
+.faq-list { display: flex; flex-direction: column; gap: 10px; margin-top: 40px; }
+details.faq { border-radius: 1.2rem; background: rgba(255,255,255,0.45); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); border: 1px solid rgba(255,255,255,0.75); box-shadow: 0 14px 40px -16px rgba(14,42,197,0.16); }
+details.faq summary { list-style: none; cursor: pointer; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-family: var(--font-raleway); font-weight: 600; font-size: 17px; color: var(--n950); }
+details.faq summary::-webkit-details-marker { display: none; }
+details.faq summary svg { transition: transform 0.3s var(--ease-out); color: var(--blue); }
+details.faq[open] summary svg { transform: rotate(45deg); }
+details.faq p { padding: 0 24px 22px; font-family: var(--font-raleway); font-size: 15px; line-height: 1.6; color: var(--n700); }
+
+/* contact */
+.c-list { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; max-width: 30rem; }
+.c-list div > span { display: block; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(14,42,197,0.8); }
+.c-list div > a, .c-list div > p { display: block; margin-top: 5px; font-family: var(--font-raleway); font-size: 15px; line-height: 1.5; color: var(--n950); font-weight: 500; }
+.c-list a:hover { color: var(--blue); }
+.form-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.field label { display: block; margin-bottom: 7px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--n500); }
+.field input, .field select, .field textarea { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(10,10,10,0.1); background: rgba(255,255,255,0.7); font-family: var(--font-raleway); font-size: 15px; color: var(--n950); outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+.field textarea { min-height: 110px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(14,42,197,0.12); }
+.form-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; border-radius: 999px; font-family: var(--font-raleway); font-size: 14px; font-weight: 600; transition: background 0.2s, color 0.2s; }
+.btn.primary { background: var(--n950); color: #fff; }
+.btn.primary:hover { background: var(--blue); }
+.btn.ghost { border: 1px solid rgba(10,10,10,0.14); color: var(--n950); background: rgba(255,255,255,0.5); }
+.btn.ghost:hover { background: #fff; }
+.form-note { margin-top: 14px; font-family: var(--font-mono); font-size: 10px; line-height: 1.6; color: var(--n500); }
+
+/* footer brand + floating WhatsApp */
+.f-bl img { width: 30px; height: 30px; }
+.f-col a.plain svg { display: none; }
+.wa { position: fixed; right: 20px; bottom: 20px; z-index: 30; width: 52px; height: 52px; border-radius: 999px; background: #25d366; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 30px -8px rgba(18,140,70,0.6); opacity: 0; transform: translateY(12px); transition: opacity 0.6s var(--ease-out) 0.6s, transform 0.6s var(--ease-out) 0.6s; }
+body.revealed .wa { opacity: 1; transform: none; }
+.wa:hover { background: #1fb858; }
+.wa svg { width: 24px; height: 24px; }
+
+@media (min-width: 640px) {
+  .grid2, .grid3, .steps { grid-template-columns: repeat(2, 1fr); }
+  .form-grid { grid-template-columns: repeat(2, 1fr); }
+  .field.full { grid-column: 1 / -1; }
+}
+@media (min-width: 768px) {
+  .wordmark { font-size: 15px; }
+  section { padding-top: 150px; padding-bottom: 150px; }
+  #hero { padding-top: 0; }
+  .hero-right { width: 330px; }
+  .glass-panel { padding: 32px 34px; }
+  .ind { text-align: right; }
+  .ind .tags { justify-content: flex-end; }
+}
+@media (min-width: 1024px) {
+  .col4 { grid-column: span 4; }
+  .col6 { grid-column: span 6; }
+  .col8 { grid-column: span 8; }
+  .grid3 { grid-template-columns: repeat(3, 1fr); }
+  .steps, .stats { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1200px) { .nav { display: flex; } }
 </style>
 </head>
 <body>
@@ -283,6 +415,10 @@ body.drawer-open #drawer { transform: none; visibility: visible; transition: tra
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
   <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></symbol>
   <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
   <symbol id="i-twitter" viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></symbol>
   <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol>
   <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
@@ -294,7 +430,7 @@ body.drawer-open #drawer { transform: none; visibility: visible; transition: tra
 <!-- loader -->
 <div id="loader">
   <div class="loader-col">
-    <div class="loader-status" id="loaderStatus">Calibrating gravity field</div>
+    <div class="loader-status" id="loaderStatus">Connecting the lines</div>
     <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
     <div class="loader-count" id="loaderCount">000%</div>
   </div>
@@ -302,80 +438,195 @@ body.drawer-open #drawer { transform: none; visibility: visible; transition: tra
 
 <!-- header -->
 <header id="header">
-  <a href="#" class="wordmark">GRAVITY</a>
+  <a href="#" class="brand" aria-label="Stallion Connect home">
+    <img src="assets/logo-mark.webp" alt="" width="38" height="38">
+    <span class="wordmark">STALLION CONNECT</span>
+  </a>
   <nav class="nav">
-    <a href="#">Works</a><a href="#">Services</a><a href="#">Team</a><a href="#">Story</a><a href="#">Contact</a>
+    <a href="#services">Services</a><a href="#about">About</a><a href="#process">How we work</a><a href="#industries">Industries</a><a href="#careers">Careers</a><a href="#faq">FAQ</a>
   </nav>
   <div class="h-right">
     <button class="glass-btn" id="openDrawer" aria-label="Open studio controls"><svg class="i"><use href="#i-sliders"/></svg></button>
-    <a href="mailto:hello@gravity.studio" class="contact-pill"><span>Contact us</span><span class="orb"><svg class="i"><use href="#i-chev"/></svg></span></a>
+    <a href="#contact" class="contact-pill"><span>Get a quote</span><span class="orb"><svg class="i"><use href="#i-chev"/></svg></span></a>
   </div>
 </header>
 
 <main>
-  <!-- 01 HERO -->
+  <!-- HERO (float) -->
   <section id="hero">
     <div class="hero-row">
       <div class="hero-left pe">
-        <div class="eyebrow hin e1">[ Digital studio ]</div>
-        <h1 class="hero-h hin e2">Less noise. More gravity.</h1>
+        <div class="eyebrow hin e1">[ Call centre, BPO and back office — India and overseas ]</div>
+        <h1 class="hero-h hin e2">Customer conversations<br>that <span class="hl">grow business.</span></h1>
+        <div class="cta-row hin e3">
+          <a href="#contact" class="contact-pill"><span>Get a quote</span><span class="orb"><svg class="i"><use href="#i-chev"/></svg></span></a>
+          <a href="#services" class="pill"><span>Explore services</span><svg class="i"><use href="#i-down"/></svg></a>
+        </div>
       </div>
       <div class="hero-right pe hin e3">
-        <p class="hero-p">We design digital experiences that remove distraction and amplify presence.</p>
-        <div class="credit">© 2026 — Independent digital agency</div>
+        <p class="hero-p">Stallion Connect runs call centre, sales, customer support and back-office operations for banks, financial services firms and growing brands in India and overseas, so your team can focus on what it does best.</p>
+        <div class="hero-stats">
+          <div><b>24x7</b><span>Support coverage</span></div>
+          <div><b>8</b><span>Service lines</span></div>
+          <div><b>2</b><span>Markets served</span></div>
+        </div>
+        <div class="credit">Where every connection counts</div>
         <div class="scroll-cue"><svg class="i"><use href="#i-down"/></svg><span>Scroll</span></div>
       </div>
     </div>
   </section>
 
-  <!-- 02 DROP -->
-  <section id="drop">
+  <!-- SERVICES (drop) -->
+  <section id="services" class="center">
     <div class="grid12">
-      <div class="col7 pe">
-        <div class="label reveal">[ 02 — Physics ]</div>
-        <h2 class="h-sec reveal" data-delay="0.1">When structure<br>lets go.</h2>
-        <p class="body-p reveal" data-delay="0.2">Keep scrolling and the field surrenders to gravity. Every sphere obeys real simulated physics — mass, momentum, restitution — tumbling down and bouncing off the floor until the energy finally settles.</p>
-      </div>
       <div class="col5 pe">
-        <div class="cards reveal" data-delay="0.25">
-          <div class="card"><div class="card-in">
-            <div class="card-head"><span><span class="card-idx">01</span><span class="card-key">Solver</span></span><span class="bdot"></span></div>
-            <div class="card-val">Verlet · 4 sub-steps</div>
-            <div class="card-desc">Stable stacking at 60fps</div>
-          </div></div>
-          <div class="card"><div class="card-in">
-            <div class="card-head"><span><span class="card-idx">02</span><span class="card-key">Restitution</span></span><span class="bdot"></span></div>
-            <div class="card-val">0.65 — bouncy</div>
-            <div class="card-desc">Energy lost on every contact</div>
-          </div></div>
-          <div class="card"><div class="card-in">
-            <div class="card-head"><span><span class="card-idx">03</span><span class="card-key">Bodies</span></span><span class="bdot"></span></div>
-            <div class="card-val">Real-time GPU</div>
-            <div class="card-desc">No pre-baked animation</div>
-          </div></div>
+        <div class="label reveal">[ 01 — What we do ]</div>
+        <h2 class="h-sec reveal" data-delay="0.1">End-to-end outsourcing, <span class="hl">under one roof.</span></h2>
+        <p class="body-p lead reveal" data-delay="0.2">From the first sales call to the last line of paperwork, our trained teams handle the work that keeps your customers happy and your business moving.</p>
+      </div>
+      <div class="col7 pe">
+        <div class="grid2 reveal" data-delay="0.2" id="svcGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT (float) -->
+  <section id="about" class="between">
+    <div class="pe">
+      <div class="label reveal">[ 02 — About Stallion Connect ]</div>
+      <h2 class="h-sec reveal" data-delay="0.1" style="max-width:52rem">A partner that works like <span class="hl">an extension of your team.</span></h2>
+    </div>
+    <div class="grid12">
+      <div class="col5 pe reveal glass-panel" data-delay="0.1">
+        <p class="body-p">Stallion Connect Private Limited is a business process outsourcing company serving businesses across India and overseas. Skilled people, clear processes and the right tools add up to consistent results, whether you need ten agents or a full operations floor.</p>
+        <p class="mv"><b>Mission</b>Deliver reliable, high-quality outsourcing that helps clients grow.</p>
+        <p class="mv" style="margin-top:10px"><b>Vision</b>Be the most trusted outsourcing partner for customer-first businesses.</p>
+      </div>
+      <div class="col7 pe">
+        <div class="stats reveal" data-delay="0.2" id="statGrid" style="grid-template-columns:repeat(2,1fr)"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CEO (drop) -->
+  <section id="ceo" class="center">
+    <div class="grid12">
+      <div class="col4 pe reveal">
+        <div class="ceo-photo"><img src="assets/ceo.webp" alt="Er. Izharuddin Siddiqui, Co-Founder &amp; Chief Executive Officer" loading="lazy" width="900" height="1125"></div>
+        <div class="ceo-name">Er. Izharuddin Siddiqui</div>
+        <div class="ceo-role">Co-Founder &amp; Chief Executive Officer (CEO)</div>
+      </div>
+      <div class="col8 pe">
+        <div class="label reveal">[ 03 — A message from the CEO ]</div>
+        <h2 class="h-sec reveal" data-delay="0.1">Lead with purpose, <span class="hl">grow with integrity.</span></h2>
+        <div class="glass-panel ceo-text reveal" data-delay="0.2">
+          <p>At our organisation, we believe that success is not just measured by business growth, but by the relationships we build, the people we empower and the value we create.</p>
+          <p>My professional journey has taught me that dedication, discipline, integrity and continuous improvement are the foundations of sustainable success.</p>
+          <p>Our vision is to create an organisation that sets high standards of professionalism, delivers exceptional value to its clients and provides opportunities for individuals to grow and succeed.</p>
+          <p>I strongly believe that our people are our greatest strength. By fostering a culture of accountability, teamwork, innovation and excellence, we aim to achieve meaningful milestones and build long-term partnerships.</p>
+          <p>As we move forward, our commitment remains clear: to lead with purpose, grow with integrity and succeed together.</p>
+          <p>Thank you to our clients, partners and team members for being part of our journey.</p>
+          <div class="tags">
+            <span class="pill">Dedication</span><span class="pill">Discipline</span><span class="pill">Integrity</span><span class="pill">Continuous improvement</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 03 SHAPE -->
-  <section id="shape">
-    <div class="pe" style="align-self:flex-start">
-      <div class="label reveal">[ 03 — Form ]</div>
-      <h2 class="h-sec reveal" data-delay="0.1">Chaos, then form.</h2>
+  <!-- WHY US (drop) -->
+  <section id="why" class="center">
+    <div>
+      <div class="pe">
+        <div class="label reveal">[ 04 — Why Stallion Connect ]</div>
+        <h2 class="h-sec reveal" data-delay="0.1">What sets us <span class="hl">apart.</span></h2>
+        <p class="body-p lead reveal" data-delay="0.2">Reliable, high-quality outsourcing that helps clients grow and builds rewarding careers.</p>
+      </div>
+      <div class="grid3 pe reveal" data-delay="0.2" id="whyGrid" style="margin-top:44px"></div>
     </div>
-    <div class="shape-bottom pe">
-      <p class="body-p reveal" data-delay="0.15">Out of free-fall, the field reassembles — every bubble finding its place in a single shape. Move your cursor through it and watch the order ripple, scatter, and recover.</p>
+  </section>
+
+  <!-- PROCESS (float) -->
+  <section id="process" class="between">
+    <div class="pe">
+      <div class="label reveal">[ 05 — How we work ]</div>
+      <h2 class="h-sec reveal" data-delay="0.1">Four steps, then we <span class="hl">keep improving.</span></h2>
+      <p class="body-p lead reveal" data-delay="0.2">A clear onboarding path so you know what happens, and when.</p>
+    </div>
+    <div class="steps pe reveal" data-delay="0.15" id="stepGrid"></div>
+  </section>
+
+  <!-- INDUSTRIES (shape: speech bubble) -->
+  <section id="industries" class="between">
+    <div class="pe">
+      <div class="label reveal">[ 06 — Industries ]</div>
+      <h2 class="h-sec reveal" data-delay="0.1" style="max-width:46rem">Built for sectors that run on <span class="hl">customer conversations.</span></h2>
+    </div>
+    <div class="ind pe">
+      <div class="tags reveal" data-delay="0.15" id="indTags"></div>
       <div class="pill reveal" data-delay="0.28"><svg class="i"><use href="#i-pointer"/></svg><span>Swipe through it</span></div>
     </div>
   </section>
 
-  <!-- 04 RELEASE -->
-  <section id="release">
-    <div class="release-in pe">
-      <div class="label reveal">[ 04 — Release ]</div>
-      <h2 class="h-sec reveal" data-delay="0.12">And then,<br>weightless.</h2>
-      <p class="body-p reveal" data-delay="0.24">The whole field lifts off the screen and rushes past you — every sphere accelerating into the lens until nothing remains but light. Less noise.</p>
+  <!-- CAREERS (drop) -->
+  <section id="careers" class="center">
+    <div class="grid12">
+      <div class="col5 pe">
+        <div class="label reveal">[ 07 — Careers ]</div>
+        <h2 class="h-sec reveal" data-delay="0.1">Build your career <span class="hl">with us.</span></h2>
+        <p class="body-p lead reveal" data-delay="0.2">Freshers are trained from day one, and experienced people grow into team leader and trainer roles. Send your CV with the role name in the subject line.</p>
+        <div class="tags reveal" data-delay="0.25">
+          <span class="pill">Training from day one</span><span class="pill">Clear growth path</span><span class="pill">Supportive team culture</span>
+        </div>
+        <a class="mail dark reveal" data-delay="0.3" href="mailto:hr@stallionconnect.in?subject=Application%3A%20General%20application"><span>hr@stallionconnect.in</span><span class="orb"><svg class="i"><use href="#i-upright"/></svg></span></a>
+      </div>
+      <div class="col7 pe">
+        <div class="jobs reveal" data-delay="0.2" id="jobList"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (drop) -->
+  <section id="faq" class="center">
+    <div class="faq-col pe">
+      <div class="label reveal">[ 08 — FAQ ]</div>
+      <h2 class="h-sec reveal" data-delay="0.1">Questions we <span class="hl">often hear.</span></h2>
+      <div class="faq-list reveal" data-delay="0.2" id="faqList"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT (release) -->
+  <section id="contact" class="center">
+    <div class="grid12">
+      <div class="col5 pe">
+        <div class="label reveal">[ 09 — Contact ]</div>
+        <h2 class="h-sec reveal" data-delay="0.1">Let's design a team <span class="hl">around your process.</span></h2>
+        <p class="body-p lead reveal" data-delay="0.2">Tell us about your process, expected volumes and timelines, and we will get back to you with a plan and a quote.</p>
+        <div class="c-list reveal" data-delay="0.25">
+          <div><span>Email</span><a href="mailto:info@stallionconnect.in">info@stallionconnect.in</a></div>
+          <div><span>Phone &amp; WhatsApp</span><a href="tel:+918960751737">+91 89607 51737</a></div>
+          <div><span>Hours</span><p>Mon to Sat, 9:00 AM to 7:00 PM IST</p></div>
+          <div><span>India office</span><p>Stallion Connect, Ground Floor, In front of Dipti hospital, Hamdard Nagar-D, Dhorra Bypass, Aligarh, Uttar Pradesh- 202001</p></div>
+          <div><span>UAE Head Office</span><p>Office-118, Al Garhoud Business Centre, Near GGICO metro station, Al Garhoud, Dubai, UAE · P.O Box 45592</p><a href="tel:+97147034555">+971 4703 4555</a><a href="mailto:info@finridge.net">info@finridge.net</a></div>
+        </div>
+      </div>
+      <div class="col7 pe">
+        <form class="glass-panel reveal" data-delay="0.2" id="quoteForm">
+          <div class="form-grid">
+            <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" required autocomplete="name"></div>
+            <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization"></div>
+            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+            <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="field full"><label for="f-service">Service</label><select id="f-service" name="service"></select></div>
+            <div class="field full"><label for="f-message">About your process</label><textarea id="f-message" name="message" required placeholder="Process, expected volumes, timelines"></textarea></div>
+          </div>
+          <div class="form-actions">
+            <button class="btn primary" type="submit" value="whatsapp"><svg class="i"><use href="#i-chat"/></svg><span>Send on WhatsApp</span></button>
+            <button class="btn ghost" type="submit" value="email"><svg class="i"><use href="#i-mail"/></svg><span>Send by email</span></button>
+          </div>
+          <p class="form-note">Opens WhatsApp or your email app with your message filled in. Nothing is sent until you press send there.</p>
+        </form>
+      </div>
     </div>
   </section>
 </main>
@@ -387,22 +638,53 @@ body.drawer-open #drawer { transform: none; visibility: visible; transition: tra
   <div class="f-body">
     <div class="f-grid">
       <div class="f-cta fadeup">
-        <div class="f-label">[ Let's collaborate ]</div>
-        <h2 class="f-h">Have an idea<br>with real weight?</h2>
-        <a class="mail" href="mailto:hello@gravity.studio"><span>hello@gravity.studio</span><span class="orb"><svg class="i"><use href="#i-upright"/></svg></span></a>
+        <div class="f-label">[ Let's talk ]</div>
+        <h2 class="f-h">Have a process<br>that needs a team?</h2>
+        <a class="mail" href="mailto:info@stallionconnect.in"><span>info@stallionconnect.in</span><span class="orb"><svg class="i"><use href="#i-upright"/></svg></span></a>
       </div>
-      <div class="f-cols" id="fcols"></div>
+      <div class="f-cols">
+        <div class="f-col fadeup">
+          <div class="f-col-t">Services</div>
+          <ul>
+            <li><a href="#services"><span>Call Centre Operations</span><svg class="i"><use href="#i-upright"/></svg></a></li>
+            <li><a href="#services"><span>Banking &amp; Financial Services</span><svg class="i"><use href="#i-upright"/></svg></a></li>
+            <li><a href="#services"><span>Inbound &amp; Outbound Sales</span><svg class="i"><use href="#i-upright"/></svg></a></li>
+            <li><a href="#services"><span>Back-Office &amp; Admin</span><svg class="i"><use href="#i-upright"/></svg></a></li>
+          </ul>
+        </div>
+        <div class="f-col fadeup" data-delay="0.08">
+          <div class="f-col-t">Company</div>
+          <ul>
+            <li><a href="#about"><span>About</span><svg class="i"><use href="#i-upright"/></svg></a></li>
+            <li><a href="#process"><span>How we work</span><svg class="i"><use href="#i-upright"/></svg></a></li>
+            <li><a href="#industries"><span>Industries</span><svg class="i"><use href="#i-upright"/></svg></a></li>
+            <li><a href="#careers"><span>Careers</span><svg class="i"><use href="#i-upright"/></svg></a></li>
+            <li><a href="#faq"><span>FAQ</span><svg class="i"><use href="#i-upright"/></svg></a></li>
+          </ul>
+        </div>
+        <div class="f-col fadeup" data-delay="0.16">
+          <div class="f-col-t">Contact</div>
+          <ul>
+            <li><a href="tel:+918960751737"><span>+91 89607 51737</span><svg class="i"><use href="#i-upright"/></svg></a></li>
+            <li><a href="mailto:info@stallionconnect.in"><span>info@stallionconnect.in</span><svg class="i"><use href="#i-upright"/></svg></a></li>
+            <li><a href="mailto:hr@stallionconnect.in"><span>hr@stallionconnect.in</span><svg class="i"><use href="#i-upright"/></svg></a></li>
+            <li><a class="plain"><span>Mon to Sat, 9:00 AM to 7:00 PM IST</span></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="f-bottom">
-      <div class="f-bl"><span class="wm">GRAVITY</span><i></i><span class="c">© 2026 Digital Studio — All rights reserved.</span></div>
+      <div class="f-bl"><img src="assets/logo-mark.webp" alt="" width="30" height="30"><span class="wm">STALLION CONNECT</span><i></i><span class="c">© 2026 Stallion Connect Private Limited. All rights reserved.</span></div>
       <div class="socials">
-        <a href="#" aria-label="Twitter"><svg class="i"><use href="#i-twitter"/></svg></a>
-        <a href="#" aria-label="Instagram"><svg class="i"><use href="#i-instagram"/></svg></a>
-        <a href="#" aria-label="LinkedIn"><svg class="i"><use href="#i-linkedin"/></svg></a>
+        <a href="tel:+918960751737" aria-label="Call us"><svg class="i"><use href="#i-phone"/></svg></a>
+        <a href="mailto:info@stallionconnect.in" aria-label="Email us"><svg class="i"><use href="#i-mail"/></svg></a>
+        <a href="https://wa.me/918960751737" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="i"><use href="#i-chat"/></svg></a>
       </div>
     </div>
   </div>
 </footer>
+
+<a class="wa" href="https://wa.me/918960751737?text=Hi%20Stallion%20Connect%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="i"><use href="#i-chat"/></svg></a>
 
 <!-- studio controls drawer -->
 <div id="scrim"></div>
@@ -411,7 +693,7 @@ body.drawer-open #drawer { transform: none; visibility: visible; transition: tra
     <div class="d-title"><svg class="i"><use href="#i-sliders"/></svg><span>Studio Controls</span></div>
     <button class="d-close" id="closeDrawer" aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
   </div>
-  <p class="d-note">Set the hero sphere palette. As you scroll, the scene morphs to volt-lime, then rose-pink as the heart assembles.</p>
+  <p class="d-note">Set the hero sphere palette. As you scroll, the field morphs to Stallion green, then sky blue as the speech bubble assembles.</p>
   <div class="d-sec"><svg class="i"><use href="#i-sparkles"/></svg><span>Hero Palette Shaders</span></div>
   <div class="themes" id="themes"></div>
   <div class="d-foot">
@@ -441,23 +723,99 @@ window.addEventListener('mouseup', () => (mousePos.isDown = false));
    Static content built from data (marquee, footer columns, themes)
    ===================================================================== */
 const track = document.getElementById('track');
-const words = ['Less noise', 'More gravity', 'Design with weight', "Let's build"];
+const words = ['Where every connection counts', 'Call centre', 'BPO', 'Back office', "Let's talk"];
 track.innerHTML = [0, 1].map(() => words.map((w) => `<span class="w">${w}</span><i></i>`).join('')).join('');
 
-const cols = {
-  Studio: ['Works', 'Services', 'Process', 'Careers'],
-  Company: ['Story', 'Team', 'Journal', 'Contact'],
-  Social: ['Twitter', 'Instagram', 'LinkedIn', 'Dribbble'],
-};
-document.getElementById('fcols').innerHTML = Object.entries(cols).map(([t, links], i) => `
-  <div class="f-col fadeup" data-delay="${(i * 0.08).toFixed(2)}">
-    <div class="f-col-t">${t}</div>
-    <ul>${links.map((l) => `<li><a href="#"><span>${l}</span><svg class="i"><use href="#i-upright"/></svg></a></li>`).join('')}</ul>
-  </div>`).join('');
+const $ = (id) => document.getElementById(id);
+const pad = (i) => String(i + 1).padStart(2, '0');
+const card = (idx, key, val, desc, cls = '') => `<div class="card ${cls}"><div class="card-in"><div class="card-head"><span><span class="card-idx">${idx}</span><span class="card-key">${key}</span></span><span class="bdot"></span></div><div class="card-val">${val}</div><div class="card-desc">${desc}</div></div></div>`;
 
+const SERVICES = [
+  ['Voice', 'Call Centre Operations', 'Domestic and international voice with trained agents and flexible shifts across time zones.'],
+  ['BFSI', 'Banking &amp; Financial Services', 'Card and loan sales, onboarding, KYC and collections for banks, NBFCs and fintechs.'],
+  ['Sales', 'Inbound &amp; Outbound Sales', 'Teams that convert enquiries into customers and reach new prospects, compliantly.'],
+  ['BPO &amp; ITES', 'BPO &amp; ITES Operations', 'Email and chat support, L1 helpdesk, data processing and content review.'],
+  ['Support', 'Support &amp; Lead Generation', 'Omnichannel support plus B2B and B2C lead generation and qualification.'],
+  ['People', 'Recruitment &amp; Training', 'Volume hiring, assessments, induction, voice and soft-skills training.'],
+  ['Back office', 'Back-Office &amp; Admin', 'Data entry, document processing, verification, billing support and MIS reports.'],
+  ['Custom', 'Need something custom?', 'Tell us how your process works and we will design a team around it.'],
+];
+$('svcGrid').innerHTML = SERVICES.map((s, i) => card(pad(i), s[0], s[1], s[2])).join('');
+$('f-service').innerHTML = SERVICES.map((s) => `<option>${s[1]}</option>`).join('');
+
+const STATS = [
+  ['7', '', 'Core service lines under one roof'],
+  ['2', '', 'Markets served: domestic and international'],
+  ['24', 'x7', 'Support coverage available'],
+  ['1', '', 'Partner for front and back office'],
+];
+$('statGrid').innerHTML = STATS.map((s) => `<div class="card"><div class="card-in"><div class="stat-n">${s[0]}<small>${s[1]}</small></div><div class="card-desc" style="margin-top:10px">${s[2]}</div></div></div>`).join('');
+
+const WHY = [
+  ['Industry-trained teams', 'Agents learn your products and compliance rules and are assessed before going live.'],
+  ['Quality you can measure', 'Call audits, KPIs and regular reports with clear SLAs.'],
+  ['Built to scale', 'Start with a pilot and grow as volumes increase.'],
+  ['Data security first', 'Access controls and confidentiality agreements protect customer information.'],
+  ['Multilingual teams', 'English, Hindi, Urdu, Arabic and regional languages.'],
+  ['Cost-effective delivery', 'Flexible team sizes and quick ramp-up, without cutting corners.'],
+];
+$('whyGrid').innerHTML = WHY.map((w, i) => card(pad(i), 'Why us', w[0], w[1])).join('');
+
+const STEPS = [
+  ['Discover', 'We learn your goals, customers, call volumes and what success looks like.'],
+  ['Design', 'We map the process, scripts, SOPs, team size and reporting.'],
+  ['Deploy', 'We hire, train and launch your team, often starting with a pilot.'],
+  ['Optimise', 'We track quality and KPIs and refine the process every month.'],
+];
+$('stepGrid').innerHTML = STEPS.map((s, i) => card(pad(i), 'Step', s[0], s[1], 'step')).join('');
+
+const INDUSTRIES = ['Banking &amp; Financial Services', 'Insurance', 'Telecom &amp; Internet', 'E-commerce &amp; Retail', 'Healthcare', 'Travel &amp; Hospitality', 'Education &amp; EdTech', 'Real Estate'];
+$('indTags').innerHTML = INDUSTRIES.map((n) => `<span class="pill">${n}</span>`).join('');
+
+const JOBS = [
+  ['Customer Support Executive', 'Full time', 'Domestic voice'],
+  ['International Voice Process Associate', 'Full time', 'International voice'],
+  ['Tele-sales Executive (BFSI)', 'Full time', 'Outbound sales'],
+  ['Back-Office Executive', 'Full time', 'Non-voice'],
+  ['Team Leader', 'Full time', 'Operations'],
+  ['Process Trainer', 'Full time', 'Training'],
+];
+$('jobList').innerHTML = JOBS.map((j) => `<div class="card"><div class="card-in job-in"><div><div class="card-val">${j[0]}</div><div class="job-meta">${j[2]} · ${j[1]}</div></div><a class="apply" href="mailto:hr@stallionconnect.in?subject=${encodeURIComponent('Application: ' + j[0])}"><span>Apply</span><svg class="i"><use href="#i-upright"/></svg></a></div></div>`).join('');
+
+const FAQ = [
+  ['Can we start with a small pilot?', 'Yes. Most clients start with a small team for a few weeks, review the results, then scale up.'],
+  ['How quickly can a team go live?', 'It depends on team size and training needs. A small pilot can usually go live within a few weeks of the process being agreed.'],
+  ['Do you handle international processes?', "Yes. We run domestic and international voice and non-voice processes, with shifts planned around your customers' time zones."],
+  ['How do you protect our customer data?', 'Access is limited to the people working on your process, staff sign confidentiality agreements, and we follow your data-handling rules.'],
+  ['How will we track performance?', 'You get regular reports on the KPIs we agree at the start, such as calls handled, conversion, quality scores and turnaround times.'],
+];
+$('faqList').innerHTML = FAQ.map((f) => `<details class="faq"><summary><span>${f[0]}</span><svg class="i"><use href="#i-plus"/></svg></summary><p>${f[1]}</p></details>`).join('');
+
+// Quote form: hands the message to WhatsApp or the visitor's email app (no backend on this static site).
+$('quoteForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const d = new FormData(e.target);
+  const v = (k) => String(d.get(k) || '').trim();
+  const lines = ['Hi Stallion Connect, I would like a quote.', '', `Name: ${v('name')}`];
+  if (v('company')) lines.push(`Company: ${v('company')}`);
+  if (v('email')) lines.push(`Email: ${v('email')}`);
+  if (v('phone')) lines.push(`Phone: ${v('phone')}`);
+  lines.push(`Service: ${v('service')}`, '', v('message'));
+  const msg = lines.join('\n');
+  if (e.submitter && e.submitter.value === 'email') {
+    window.location.href = `mailto:info@stallionconnect.in?subject=${encodeURIComponent('Quote request: ' + (v('company') || v('name')))}&body=${encodeURIComponent(msg)}`;
+  } else {
+    window.open(`https://wa.me/918960751737?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+  }
+});
+
+// In-page links glide with the smooth scroller.
 document.addEventListener('click', (e) => {
-  const a = e.target.closest('a[href="#"]');
-  if (a) e.preventDefault();
+  const a = e.target.closest('a[href^="#"]');
+  if (!a) return;
+  e.preventDefault();
+  const el = document.getElementById(a.getAttribute('href').slice(1));
+  window.__smoothTo(el ? el.getBoundingClientRect().top + window.scrollY : 0);
 });
 
 /* =====================================================================
@@ -476,6 +834,11 @@ document.addEventListener('click', (e) => {
     lastSet = window.scrollY;
     if (running) requestAnimationFrame(loop);
   };
+  window.__smoothTo = (y) => {
+    if (!running) { current = lastSet = window.scrollY; }
+    target = Math.min(maxScroll(), Math.max(0, y));
+    if (!running) { running = true; requestAnimationFrame(loop); }
+  };
   window.addEventListener('wheel', (e) => {
     if (e.ctrlKey || document.body.classList.contains('drawer-open')) return;
     e.preventDefault();
@@ -491,11 +854,24 @@ document.addEventListener('click', (e) => {
    Scroll → progress + background stage
    ===================================================================== */
 const bg = document.getElementById('bg');
+const STAGES = [
+  ['hero', 0], ['services', 1], ['about', 0], ['ceo', 1], ['why', 1], ['process', 0],
+  ['industries', 2.3], ['careers', 1], ['faq', 1], ['contact', 3.5],
+].map(([id, v]) => ({ el: document.getElementById(id), v }));
 let scrollRaf = 0;
 const updateProgress = () => {
   scrollRaf = 0;
+  // Each section holds a scene stage (0 float, 1 drop, ~2.3 speech bubble, 3.5 release);
+  // the field blends between neighbours as the boundary crosses the middle of the viewport.
   const vh = window.innerHeight || 1;
-  const progress = window.scrollY / vh;
+  const c = window.scrollY + vh / 2;
+  let progress = STAGES[0].v;
+  for (let i = 1; i < STAGES.length; i++) {
+    const b = STAGES[i].el.getBoundingClientRect().top + window.scrollY;
+    const t = (c - (b - 0.4 * vh)) / (0.65 * vh);
+    if (t <= 0) break;
+    progress = STAGES[i - 1].v + (STAGES[i].v - STAGES[i - 1].v) * Math.min(1, t);
+  }
   control.progress = progress;
   const stage = progress > 1.55 ? 2 : progress > 0.7 ? 1 : 0;
   if (bg.dataset.stage !== String(stage)) bg.dataset.stage = String(stage);
@@ -588,6 +964,9 @@ function createScene(container, ballColor, onReady) {
     if (hex === '#e1fc03') {
       return { pastel: new THREE.Color('#FBFFE2'), light: new THREE.Color('#EFFE69'),
         medium: new THREE.Color('#E1FC03'), deep: new THREE.Color('#B1E200'), glass: new THREE.Color('#DCFF32') };
+    } else if (hex === '#2bd66b') {
+      return { pastel: new THREE.Color('#EAFBF0'), light: new THREE.Color('#A9EFC1'),
+        medium: new THREE.Color('#2BD66B'), deep: new THREE.Color('#139528'), glass: new THREE.Color('#4FE088') };
     } else if (hex === '#ffc5c2' || hex === '#ffa19e') {
       return { pastel: new THREE.Color('#FFF5F4'), light: new THREE.Color('#FFECEB'),
         medium: new THREE.Color('#FFA6B3'), deep: new THREE.Color('#FF4D6D'), glass: new THREE.Color('#FFA6B3') };
@@ -611,8 +990,8 @@ function createScene(container, ballColor, onReady) {
 
   // Scroll-driven palettes: hero (base) → volt-lime (drop) → rose-pink (heart).
   const palHero = palette;
-  const palLime = getDynamicColors('#E1FC03');
-  const palPink = getDynamicColors('#FFC5C2');
+  const palLime = getDynamicColors('#2BD66B'); // drop stage: Stallion green
+  const palPink = getDynamicColors('#96E5FF'); // shape stage: sky blue
   const ROLES = ['pastel', 'light', 'medium', 'deep', 'glass'];
   const curPal = { pastel: new THREE.Color(), light: new THREE.Color(), medium: new THREE.Color(),
     deep: new THREE.Color(), glass: new THREE.Color() };
@@ -690,9 +1069,19 @@ function createScene(container, ballColor, onReady) {
   let shapeScale = 1;
 
   // --- heart silhouette targets ---
+  // Speech-bubble silhouette: a rounded rectangle with a tail at the lower left.
   const inHeart = (x, y) => {
-    const a = x * x + y * y - 1;
-    return a * a * a - x * x * y * y * y <= 0;
+    const hw = 1.25, top = 1.05, bot = -0.5, r = 0.5;
+    const cy = (top + bot) / 2, hh = (top - bot) / 2;
+    const ax = Math.abs(x), ay = Math.abs(y - cy);
+    if (ax <= hw && ay <= hh) {
+      const dx = ax - (hw - r), dy = ay - (hh - r);
+      if (dx <= 0 || dy <= 0 || dx * dx + dy * dy <= r * r) return true;
+    }
+    // tail triangle A(-0.8,-0.45) B(-0.1,-0.45) C(-0.95,-1.3)
+    const s = (px, py, qx, qy) => (x - qx) * (py - qy) - (px - qx) * (y - qy);
+    const d1 = s(-0.8, -0.45, -0.1, -0.45), d2 = s(-0.1, -0.45, -0.95, -1.3), d3 = s(-0.95, -1.3, -0.8, -0.45);
+    return !((d1 < 0 || d2 < 0 || d3 < 0) && (d1 > 0 || d2 > 0 || d3 > 0));
   };
   const assignHeartTargets = () => {
     const S = Math.min(viewportWidth * 0.30, viewportHeight * 0.27);
@@ -880,6 +1269,8 @@ function createScene(container, ballColor, onReady) {
 
       b.velocity.multiplyScalar(damping);
       b.position.addScaledVector(b.velocity, 1);
+      // Park released spheres just past the lens so they can always come back.
+      if (b.position.lengthSq() > 3600) { b.position.setLength(60); b.velocity.set(0, 0, 0); }
 
       const c = b.isGlass ? curPal.glass : curPal[b.role];
       b.material.color.copy(c);
@@ -1029,7 +1420,7 @@ const onDone = () => {
       shown = n;
       loaderFill.style.width = value.toFixed(1) + '%';
       loaderCount.textContent = String(n).padStart(3, '0') + '%';
-      loaderStatus.textContent = n >= 100 ? 'Entering orbit' : 'Calibrating gravity field';
+      loaderStatus.textContent = n >= 100 ? 'You are connected' : 'Connecting the lines';
     }
     if (value >= 99.9 && sceneReady) {
       setTimeout(() => loaderEl.classList.add('leaving'), 140);
@@ -1047,7 +1438,7 @@ const onDone = () => {
 const glContainer = document.getElementById('gl');
 const THEMES = [
   { id: 'roseGold', name: 'Royal Blue & Pearl', description: 'Hyper-distinct cobalt spheres floating in soft white-slate gradients.', primaryColor: '#2F69FF', ballColor: '#2F69FF' },
-  { id: 'pinkBlush', name: 'Rose Blush & Crème', description: 'Sweet candy pinks and juicy strawberry accents in a pearl studio.', primaryColor: '#FFA6B3', ballColor: '#FFC5C2' },
+  { id: 'brandGreen', name: 'Stallion Green & Mint', description: 'The green from the Stallion Connect mark, from soft mint to deep leaf.', primaryColor: '#139528', ballColor: '#2BD66B' },
   { id: 'voltLime', name: 'Volt Lime & Slate', description: 'Electric neon volt-lime against a clean white-slate horizon.', primaryColor: '#E1FC03', ballColor: '#E1FC03' },
   { id: 'arcticBlue', name: 'Arctic Sky & Crystal', description: 'Cool arctic crystal blues with a translucent glass sheen.', primaryColor: '#96E5FF', ballColor: '#96E5FF' },
 ];
